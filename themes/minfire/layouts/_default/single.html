@@ -1,6 +1,9 @@
-{{.Title}}
-{{.Content}}
-{{ range .Pages }}
-  {{.Title}}
+{{ partial "header.html" . }}
+<body>
+  <h1>{{.Title}}</h1>
   {{.Content}}
-{{ end }}
+  {{ range .Pages }}
+    {{.Title}}
+    {{.Content}}
+  {{ end }}
+{{ partial "footer.html" . }}
